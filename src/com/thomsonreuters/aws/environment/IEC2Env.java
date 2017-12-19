@@ -7,8 +7,8 @@ import com.thomsonreuters.aws.environment.request.ec2.IDescribeEC2sRequest;
 
 public interface IEC2Env  {
 
-	IAmis describeAmis(IDescribeAmisRequest request);
+    IAmis describeAmis(IDescribeAmisRequest request);
 
-	IEC2s describeEC2s(IDescribeEC2sRequest request);
+    IEC2s describeEC2s(IDescribeEC2sRequest request);
 
 }

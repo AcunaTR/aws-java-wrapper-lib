@@ -23,23 +23,23 @@ import com.thomsonreuters.aws.environment.request.ec2.IDescribeEC2sRequestRaw;
  */
 public class EC2EnvImpl implements IEC2Env {
 	    
-	    private final AmazonEC2 _ec2;
-	    
-	    public EC2EnvImpl() {
-	        _ec2 = AmazonEC2ClientBuilder.defaultClient();
-	    }
-	    
-	    @Override
-	    public IAmis describeAmis(IDescribeAmisRequest request) {
-	        IDescribeAmisRequestRaw raw = (IDescribeAmisRequestRaw)request;
-	        return new AmisImpl(_ec2.describeImages(raw.getRaw()).getImages());
-	    }
+    private final AmazonEC2 _ec2;
+
+    public EC2EnvImpl() {
+        _ec2 = AmazonEC2ClientBuilder.defaultClient();
+    }
+
+    @Override
+    public IAmis describeAmis(IDescribeAmisRequest request) {
+        IDescribeAmisRequestRaw raw = (IDescribeAmisRequestRaw)request;
+        return new AmisImpl(_ec2.describeImages(raw.getRaw()).getImages());
+    }
 
 
-	    @Override
-	    public IEC2s describeEC2s(IDescribeEC2sRequest request) {
-	        IDescribeEC2sRequestRaw raw = (IDescribeEC2sRequestRaw)request;
-	        return new EC2sImpl(_ec2.describeInstances(raw.getRaw()).getReservations().get(0).getInstances());
-	    }
+    @Override
+    public IEC2s describeEC2s(IDescribeEC2sRequest request) {
+        IDescribeEC2sRequestRaw raw = (IDescribeEC2sRequestRaw)request;
+        return new EC2sImpl(_ec2.describeInstances(raw.getRaw()).getReservations().get(0).getInstances());
+    }
 }
 
