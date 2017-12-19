@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami.wrappers;
+package com.thomsonreuters.aws.ami.wrappers.impl;
+
+import com.amazonaws.services.ec2.model.DescribeImagesRequest;
 
 /**
  *
  * @author U6067157
  */
-public interface ITag {
-    String getName();
-	
-    String getValue();
+public interface IDescribeRequestRaw {
+    DescribeImagesRequest getRaw();
 }

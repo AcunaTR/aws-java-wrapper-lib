@@ -9,8 +9,6 @@ package com.thomsonreuters.aws.ami.wrappers;
  *
  * @author U6067157
  */
-public interface ITag {
-    String getName();
-	
-    String getValue();
+public interface IDescribeRequest {
+    void setFilters(IRequestFilters filters);
 }

@@ -7,15 +7,15 @@ package com.thomsonreuters.aws.ami.wrappers.impl;
 
 import com.thomsonreuters.aws.ami.wrappers.impl.TagImpl;
 import com.amazonaws.services.ec2.model.Tag;
-import com.thomsonreuters.aws.ami.wrappers.IAmiTag;
-import com.thomsonreuters.aws.ami.wrappers.IAmiTags;
 import java.util.List;
+import com.thomsonreuters.aws.ami.wrappers.ITags;
+import com.thomsonreuters.aws.ami.wrappers.ITag;
 
 /**
  *
  * @author U6067157
  */
-public class TagsImpl implements IAmiTags {
+public class TagsImpl implements ITags {
     private final List<Tag> _tags;
     
     public TagsImpl(List<Tag> tags)
@@ -36,7 +36,7 @@ public class TagsImpl implements IAmiTags {
     }
     
     @Override
-    public IAmiTag get(int idx)
+    public ITag get(int idx)
     {
         return new TagImpl(_tags.get(idx));
     }

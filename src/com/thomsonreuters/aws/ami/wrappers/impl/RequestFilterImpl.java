@@ -6,20 +6,20 @@
 package com.thomsonreuters.aws.ami.wrappers.impl;
 
 import com.amazonaws.services.ec2.model.Filter;
-import com.thomsonreuters.aws.ami.wrappers.IAmiRequestFilter;
 import java.util.ArrayList;
 import java.util.List;
+import com.thomsonreuters.aws.ami.wrappers.IRequestFilter;
 
 /**
  *
  * @author U6067157
  */
-public class AmiRequestFilterImpl implements IAmiRequestFilter, IDescribeAmiRequestFilterRaw {
+public class RequestFilterImpl implements IRequestFilter, IDescribeRequestFilterRaw {
 
     private final String _name;
     private final List<String> _values;
     
-    public AmiRequestFilterImpl(String name)
+    public RequestFilterImpl(String name)
     {
         _name = name;
         _values = new ArrayList<>();

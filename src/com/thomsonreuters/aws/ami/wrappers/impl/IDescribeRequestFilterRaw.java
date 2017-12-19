@@ -11,6 +11,6 @@ import com.amazonaws.services.ec2.model.Filter;
  *
  * @author U6067157
  */
-public interface IDescribeAmiRequestFilterRaw {
+public interface IDescribeRequestFilterRaw {
     Filter getRaw();
 }

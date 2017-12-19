@@ -9,6 +9,6 @@ package com.thomsonreuters.aws.ami.wrappers;
  *
  * @author U6067157
  */
-public interface IAmiRequestFilters {
-    void addFilter(IAmiRequestFilter filter);
+public interface IRequestFilters {
+    void addFilter(IRequestFilter filter);
 }

@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami.wrappers;
+package com.thomsonreuters.aws.ec2.wrappers;
 
 /**
  *
  * @author U6067157
  */
-public interface ITag {
-    String getName();
-	
-    String getValue();
+public class Ec2EnvImpl {
+    
 }

@@ -6,22 +6,29 @@
 package com.thomsonreuters.aws.ami.wrappers.impl;
 
 import com.amazonaws.services.ec2.model.DescribeImagesRequest;
-import com.thomsonreuters.aws.ami.wrappers.IAmiRequestFilters;
+import com.thomsonreuters.aws.ami.wrappers.IDescribeRequest;
+import com.thomsonreuters.aws.ami.wrappers.IRequestFilters;
 
 /**
  *
  * @author U6067157
  */
-public class DescribeAmiRequestImpl {
+public class DescribeRequestImpl implements IDescribeRequest, IDescribeRequestRaw {
     private final DescribeImagesRequest _req;
     
-    public DescribeAmiRequestImpl() {
+    public DescribeRequestImpl() {
         _req = new DescribeImagesRequest();
     }
     
-    public void setFilters(IAmiRequestFilters filters) {
-        IDescribeAmiRequestFiltersRaw raw = (IDescribeAmiRequestFiltersRaw) filters;
+    @Override
+    public void setFilters(IRequestFilters filters) {
+        IDescribeRequestFiltersRaw raw = (IDescribeRequestFiltersRaw) filters;
         
         _req.setFilters(raw.getRaw());
+    }
+
+    @Override
+    public DescribeImagesRequest getRaw() {
+        return _req;
     }
 }

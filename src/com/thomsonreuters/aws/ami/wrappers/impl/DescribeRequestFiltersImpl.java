@@ -6,26 +6,26 @@
 package com.thomsonreuters.aws.ami.wrappers.impl;
 
 import com.amazonaws.services.ec2.model.Filter;
-import com.thomsonreuters.aws.ami.wrappers.IAmiRequestFilter;
-import com.thomsonreuters.aws.ami.wrappers.IAmiRequestFilters;
 import java.util.ArrayList;
 import java.util.List;
+import com.thomsonreuters.aws.ami.wrappers.IRequestFilter;
+import com.thomsonreuters.aws.ami.wrappers.IRequestFilters;
 
 /**
  *
  * @author U6067157
  */
-public class DescribeAmiRequestFiltersImpl implements IAmiRequestFilters, IDescribeAmiRequestFiltersRaw {
+public class DescribeRequestFiltersImpl implements IRequestFilters, IDescribeRequestFiltersRaw {
 
     private final List<Filter> _filters;
     
-    public DescribeAmiRequestFiltersImpl() {
+    public DescribeRequestFiltersImpl() {
         _filters = new ArrayList<>();
     }
     
     @Override
-    public void addFilter(IAmiRequestFilter filter) {
-        IDescribeAmiRequestFilterRaw raw = (IDescribeAmiRequestFilterRaw)filter;
+    public void addFilter(IRequestFilter filter) {
+        IDescribeRequestFilterRaw raw = (IDescribeRequestFilterRaw)filter;
         _filters.add(raw.getRaw());
     }
 

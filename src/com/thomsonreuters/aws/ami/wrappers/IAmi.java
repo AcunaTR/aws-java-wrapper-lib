@@ -12,7 +12,7 @@ package com.thomsonreuters.aws.ami.wrappers;
 public interface IAmi {
     String getImageId();
     
-    IAmiTags getTags();
+    ITags getTags();
     
     String getImageName();
 }

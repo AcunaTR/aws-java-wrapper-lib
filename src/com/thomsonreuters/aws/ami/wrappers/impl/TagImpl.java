@@ -6,13 +6,13 @@
 package com.thomsonreuters.aws.ami.wrappers.impl;
 
 import com.amazonaws.services.ec2.model.Tag;
-import com.thomsonreuters.aws.ami.wrappers.IAmiTag;
+import com.thomsonreuters.aws.ami.wrappers.ITag;
 
 /**
  *
  * @author U6067157
  */
-public class TagImpl implements IAmiTag {
+public class TagImpl implements ITag {
     private final Tag _tag;
     
     public TagImpl(Tag tag)

@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author U6067157
  */
-public interface IAmiRequestFilter {
+public interface IRequestFilter {
     
     String getName();
     

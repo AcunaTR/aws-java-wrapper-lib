@@ -9,10 +9,10 @@ package com.thomsonreuters.aws.ami.wrappers;
  *
  * @author U6067157
  */
-public interface IAmiTags {
+public interface ITags {
     int size();
     
     boolean isEmpty();
     
-    IAmiTag get(int idx);
+    ITag get(int idx);
 }

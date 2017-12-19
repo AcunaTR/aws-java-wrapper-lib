@@ -12,6 +12,6 @@ import java.util.List;
  *
  * @author U6067157
  */
-public interface IDescribeAmiRequestFiltersRaw {
+public interface IDescribeRequestFiltersRaw {
     List<Filter> getRaw();
 }

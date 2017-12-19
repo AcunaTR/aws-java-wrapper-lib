@@ -7,7 +7,7 @@ package com.thomsonreuters.aws.ami.wrappers.impl;
 
 import com.amazonaws.services.ec2.model.Image;
 import com.thomsonreuters.aws.ami.wrappers.IAmi;
-import com.thomsonreuters.aws.ami.wrappers.IAmiTags;
+import com.thomsonreuters.aws.ami.wrappers.ITags;
 
 /**
  *
@@ -27,7 +27,7 @@ public class AmiImpl implements IAmi {
 	}
 
     @Override
-	public IAmiTags getTags() {
+	public ITags getTags() {
             return new TagsImpl(_ami.getTags());
 	}
 	
