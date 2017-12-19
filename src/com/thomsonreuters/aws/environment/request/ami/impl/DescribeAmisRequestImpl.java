@@ -7,7 +7,7 @@ package com.thomsonreuters.aws.environment.request.ami.impl;
 
 import com.amazonaws.services.ec2.model.DescribeImagesRequest;
 import com.thomsonreuters.aws.environment.request.ami.IDescribeAmisRequest;
-import com.thomsonreuters.aws.environment.request.ami.raw.IDescribeAmisRequestRaw;
+import com.thomsonreuters.aws.environment.request.ami.IDescribeAmisRequestRaw;
 import com.thomsonreuters.aws.environment.request.filter.IFilters;
 import com.thomsonreuters.aws.environment.request.filter.raw.IFiltersRaw;
 
