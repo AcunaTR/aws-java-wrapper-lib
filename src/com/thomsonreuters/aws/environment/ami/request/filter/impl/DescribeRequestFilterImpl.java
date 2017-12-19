@@ -3,23 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami.wrappers.impl;
+package com.thomsonreuters.aws.environment.ami.request.filter.impl;
 
 import com.amazonaws.services.ec2.model.Filter;
 import java.util.ArrayList;
 import java.util.List;
-import com.thomsonreuters.aws.ami.wrappers.IRequestFilter;
+
+import com.thomsonreuters.aws.environment.ami.request.filter.IRequestFilter;
+import com.thomsonreuters.aws.environment.ami.request.filter.raw.IDescribeRequestFilterRaw;
 
 /**
  *
  * @author U6067157
  */
-public class RequestFilterImpl implements IRequestFilter, IDescribeRequestFilterRaw {
+public class DescribeRequestFilterImpl implements IRequestFilter, IDescribeRequestFilterRaw {
 
     private final String _name;
     private final List<String> _values;
     
-    public RequestFilterImpl(String name)
+    public DescribeRequestFilterImpl(String name)
     {
         _name = name;
         _values = new ArrayList<>();

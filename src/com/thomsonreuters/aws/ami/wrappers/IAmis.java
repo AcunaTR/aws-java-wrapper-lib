@@ -5,6 +5,8 @@
  */
 package com.thomsonreuters.aws.ami.wrappers;
 
+import com.thomsonreuters.aws.ami.IAmi;
+
 /**
  *
  * @author U6067157

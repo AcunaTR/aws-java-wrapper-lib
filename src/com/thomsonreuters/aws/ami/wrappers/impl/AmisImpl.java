@@ -6,7 +6,8 @@
 package com.thomsonreuters.aws.ami.wrappers.impl;
 
 import com.amazonaws.services.ec2.model.Image;
-import com.thomsonreuters.aws.ami.wrappers.IAmi;
+import com.thomsonreuters.aws.ami.IAmi;
+import com.thomsonreuters.aws.ami.impl.AmiImpl;
 import com.thomsonreuters.aws.ami.wrappers.IAmis;
 import java.util.List;
 

@@ -5,18 +5,18 @@
  */
 package com.thomsonreuters.aws.ami.wrapperstubs;
 
-import com.thomsonreuters.aws.ami.wrappers.IDescribeRequest;
-import com.thomsonreuters.aws.ami.wrappers.IRequestFilters;
+import com.thomsonreuters.aws.environment.ami.request.IDescribeAmiRequest;
+import com.thomsonreuters.aws.environment.ami.request.filter.IRequestFilters;
 
 /**
  *
  * @author U6067157
  */
-public class DescribeRequestStub implements IDescribeRequest {
+public class DescribeRequestStub implements IDescribeAmiRequest {
     
     private IRequestFilters _filters = null;
     
-    public static IDescribeRequest create() {
+    public static IDescribeAmiRequest create() {
         return new DescribeRequestStub();
     }
 

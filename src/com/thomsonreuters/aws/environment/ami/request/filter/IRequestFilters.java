@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami.wrappers.impl;
-
-import com.amazonaws.services.ec2.model.Filter;
+package com.thomsonreuters.aws.environment.ami.request.filter;
 
 /**
  *
  * @author U6067157
  */
-public interface IDescribeRequestFilterRaw {
-    Filter getRaw();
+public interface IRequestFilters {
+    void addFilter(IRequestFilter filter);
 }

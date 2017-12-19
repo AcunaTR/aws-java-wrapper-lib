@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami.wrappers;
+package com.thomsonreuters.aws.environment.ami.request;
 
-import com.thomsonreuters.aws.ami.wrappers.impl.DescribeRequestImpl;
+import com.thomsonreuters.aws.environment.ami.request.impl.DescribeRequestImpl;
 
 /**
  *
  * @author U6067157
  */
-public class DescribeRequest {
-    public static IDescribeRequest create() {
+public class DescribeRequestFactory {
+    public static IDescribeAmiRequest create() {
         return new DescribeRequestImpl();
     }
 }

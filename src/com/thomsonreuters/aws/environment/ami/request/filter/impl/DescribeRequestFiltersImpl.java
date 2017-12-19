@@ -3,13 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami.wrappers.impl;
+package com.thomsonreuters.aws.environment.ami.request.filter.impl;
 
 import com.amazonaws.services.ec2.model.Filter;
 import java.util.ArrayList;
 import java.util.List;
-import com.thomsonreuters.aws.ami.wrappers.IRequestFilter;
-import com.thomsonreuters.aws.ami.wrappers.IRequestFilters;
+
+import com.thomsonreuters.aws.environment.ami.request.filter.IRequestFilter;
+import com.thomsonreuters.aws.environment.ami.request.filter.IRequestFilters;
+import com.thomsonreuters.aws.environment.ami.request.filter.raw.IDescribeRequestFilterRaw;
+import com.thomsonreuters.aws.environment.ami.request.filter.raw.IDescribeRequestFiltersRaw;
 
 /**
  *

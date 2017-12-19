@@ -5,10 +5,11 @@
  */
 package com.thomsonreuters.aws.ami.wrapperstubs;
 
-import com.thomsonreuters.aws.ami.wrappers.IRequestFilter;
-import com.thomsonreuters.aws.ami.wrappers.IRequestFilters;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.thomsonreuters.aws.environment.ami.request.filter.IRequestFilter;
+import com.thomsonreuters.aws.environment.ami.request.filter.IRequestFilters;
 
 /**
  *

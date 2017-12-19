@@ -3,17 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami.wrappers.impl;
+package com.thomsonreuters.aws.environment.ami.request.impl;
 
 import com.amazonaws.services.ec2.model.DescribeImagesRequest;
-import com.thomsonreuters.aws.ami.wrappers.IDescribeRequest;
-import com.thomsonreuters.aws.ami.wrappers.IRequestFilters;
+import com.thomsonreuters.aws.environment.ami.request.IDescribeAmiRequest;
+import com.thomsonreuters.aws.environment.ami.request.filter.IRequestFilters;
+import com.thomsonreuters.aws.environment.ami.request.filter.raw.IDescribeRequestFiltersRaw;
+import com.thomsonreuters.aws.environment.ami.request.impl.raw.IDescribeRequestRaw;
 
 /**
  *
  * @author U6067157
  */
-public class DescribeRequestImpl implements IDescribeRequest, IDescribeRequestRaw {
+public class DescribeRequestImpl implements IDescribeAmiRequest, IDescribeRequestRaw {
     private final DescribeImagesRequest _req;
     
     public DescribeRequestImpl() {

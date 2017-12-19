@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami.wrappers;
+package com.thomsonreuters.aws.environment.ami.request.filter;
 
-import com.thomsonreuters.aws.ami.wrappers.impl.RequestFilterImpl;
-import com.thomsonreuters.aws.ami.wrappers.impl.DescribeRequestFiltersImpl;
+import com.thomsonreuters.aws.environment.ami.request.filter.impl.DescribeRequestFilterImpl;
+import com.thomsonreuters.aws.environment.ami.request.filter.impl.DescribeRequestFiltersImpl;
 
 /**
  *
  * @author U6067157
  */
-public class RequestFilters {
+public class RequestFiltersFactory {
     public static IRequestFilter createFilter(String name) {
-        return new RequestFilterImpl(name);
+        return new DescribeRequestFilterImpl(name);
     }
     
     public static IRequestFilters createFilterCollection() {

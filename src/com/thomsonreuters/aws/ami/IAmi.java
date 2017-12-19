@@ -5,14 +5,16 @@
  */
 package com.thomsonreuters.aws.ami;
 
-import com.thomsonreuters.aws.ami.wrappers.IAmi;
-import com.thomsonreuters.aws.ami.wrappers.IRequestFilters;
-import java.util.List;
+import com.thomsonreuters.aws.ami.wrappers.ITags;
 
 /**
  *
  * @author U6067157
  */
-public interface IImage {
-    List<IAmi> findImages(IRequestFilters filters);
+public interface IAmi {
+	String getImageId();
+    
+    ITags getTags();
+    
+    String getImageName();
 }

@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami.wrappers.impl;
+package com.thomsonreuters.aws.environment;
 
-import com.amazonaws.services.ec2.model.DescribeImagesRequest;
+import com.thomsonreuters.aws.environment.impl.EnvImpl;
 
 /**
  *
  * @author U6067157
  */
-public interface IDescribeRequestRaw {
-    DescribeImagesRequest getRaw();
+public class EnvFactory {
+    public static IEnv create() {
+        return new EnvImpl();
+    }
 }

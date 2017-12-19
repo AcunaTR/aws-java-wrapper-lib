@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami.wrappers.impl;
+package com.thomsonreuters.aws.ami.impl;
 
 import com.amazonaws.services.ec2.model.Image;
-import com.thomsonreuters.aws.ami.wrappers.IAmi;
+import com.thomsonreuters.aws.ami.IAmi;
 import com.thomsonreuters.aws.ami.wrappers.ITags;
+import com.thomsonreuters.aws.ami.wrappers.impl.TagsImpl;
 
 /**
  *
  * @author U6067157
  */
 public class AmiImpl implements IAmi {
-    private final Image _ami;
+
+	private final Image _ami;
 	
 	public AmiImpl(Image ami) {
             _ami = ami;
@@ -35,4 +37,6 @@ public class AmiImpl implements IAmi {
 	public String getImageName() {
             return _ami.getName();
 	}
+    
+    
 }

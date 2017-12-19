@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami.wrappers;
+package com.thomsonreuters.aws.environment.ami.request.filter;
 
 import java.util.List;
 

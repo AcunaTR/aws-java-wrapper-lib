@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.environment.wrappers;
+package com.thomsonreuters.aws.environment.ami.request;
 
-import com.thomsonreuters.aws.environment.wrappers.impl.EC2EnvImpl;
+import com.thomsonreuters.aws.environment.ami.request.filter.IRequestFilters;
 
 /**
  *
  * @author U6067157
  */
-public class EC2Env {
-    public static IEC2Env create() {
-        return new EC2EnvImpl();
-    }
+public interface IDescribeAmiRequest {
+    void setFilters(IRequestFilters filters);
 }
