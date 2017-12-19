@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ec2.wrappers;
+package com.thomsonreuters.aws.environment.wrappers;
 
-import com.thomsonreuters.aws.ec2.wrappers.impl.Ec2EnvImpl;
+import com.thomsonreuters.aws.environment.wrappers.impl.EC2EnvImpl;
 
 /**
  *
  * @author U6067157
  */
-public class Env {
-    public static IEnv create() {
-        return new Ec2EnvImpl();
+public class EC2Env {
+    public static IEC2Env create() {
+        return new EC2EnvImpl();
     }
 }
