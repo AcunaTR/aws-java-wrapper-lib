@@ -36,6 +36,5 @@ public class RequestFilterStub implements IRequestFilter {
     @Override
     public void addValue(String value) {
         _values.add(value);
-    }
-    
+    } 
 }
