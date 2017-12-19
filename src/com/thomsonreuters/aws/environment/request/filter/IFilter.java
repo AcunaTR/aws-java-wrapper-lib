@@ -3,18 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami;
+package com.thomsonreuters.aws.environment.request.filter;
 
-import com.thomsonreuters.aws.tag.ITags;
+import java.util.List;
 
 /**
  *
  * @author U6067157
  */
-public interface IAmi {
-	String getImageId();
+public interface IFilter {
     
-    ITags getTags();
+    String getName();
     
-    String getImageName();
+    void addValue(String value);
+    
+    List<String> getValues();
 }

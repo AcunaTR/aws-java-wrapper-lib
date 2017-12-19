@@ -8,24 +8,24 @@ package com.thomsonreuters.aws.ami.wrapperstubs;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.thomsonreuters.aws.environment.ami.request.filter.IRequestFilter;
-import com.thomsonreuters.aws.environment.ami.request.filter.IRequestFilters;
+import com.thomsonreuters.aws.environment.request.filter.IFilter;
+import com.thomsonreuters.aws.environment.request.filter.IFilters;
 
 /**
  *
  * @author U6067157
  */
-public class RequestFiltersStub implements IRequestFilters {
+public class RequestFiltersStub implements IFilters {
 
-    private final List<IRequestFilter> _filters = new ArrayList<>();
+    private final List<IFilter> _filters = new ArrayList<>();
     
     @Override
-    public void addFilter(IRequestFilter filter) {
+    public void addFilter(IFilter filter) {
         _filters.add(filter);
     }
     
     
-    public List<IRequestFilter> getFilters() {
+    public List<IFilter> getFilters() {
         return _filters;
     }
 }

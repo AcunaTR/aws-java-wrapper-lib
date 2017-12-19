@@ -7,8 +7,8 @@ package com.thomsonreuters.aws.ami.impl;
 
 import com.amazonaws.services.ec2.model.Image;
 import com.thomsonreuters.aws.ami.IAmi;
-import com.thomsonreuters.aws.ami.wrappers.ITags;
-import com.thomsonreuters.aws.ami.wrappers.impl.TagsImpl;
+import com.thomsonreuters.aws.tag.ITags;
+import com.thomsonreuters.aws.tag.impl.TagsImpl;
 
 /**
  *

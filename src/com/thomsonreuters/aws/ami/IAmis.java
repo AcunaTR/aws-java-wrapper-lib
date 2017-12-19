@@ -5,16 +5,14 @@
  */
 package com.thomsonreuters.aws.ami;
 
-import com.thomsonreuters.aws.tag.ITags;
-
 /**
  *
  * @author U6067157
  */
-public interface IAmi {
-	String getImageId();
+public interface IAmis {
+    int size();
     
-    ITags getTags();
+    boolean isEmpty();
     
-    String getImageName();
+    IAmi get(int idx);
 }

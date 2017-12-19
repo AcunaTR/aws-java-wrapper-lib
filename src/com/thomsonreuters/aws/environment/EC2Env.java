@@ -3,18 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.ami;
+package com.thomsonreuters.aws.environment;
 
-import com.thomsonreuters.aws.tag.ITags;
+import com.thomsonreuters.aws.environment.impl.EC2EnvImpl;
 
 /**
  *
  * @author U6067157
  */
-public interface IAmi {
-	String getImageId();
-    
-    ITags getTags();
-    
-    String getImageName();
+public class EC2Env {
+    public static IEC2Env create() {
+        return new EC2EnvImpl();
+    }
 }

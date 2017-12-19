@@ -8,13 +8,13 @@ package com.thomsonreuters.aws.ami.wrapperstubs;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.thomsonreuters.aws.environment.ami.request.filter.IRequestFilter;
+import com.thomsonreuters.aws.environment.request.filter.IFilter;
 
 /**
  *
  * @author U6067157
  */
-public class RequestFilterStub implements IRequestFilter {
+public class RequestFilterStub implements IFilter {
 
     private String _name;
     
