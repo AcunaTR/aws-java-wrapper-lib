@@ -5,7 +5,6 @@
  */
 package com.thomsonreuters.aws.ami.wrappers.impl;
 
-import com.thomsonreuters.aws.ami.wrappers.impl.TagImpl;
 import com.amazonaws.services.ec2.model.Tag;
 import java.util.List;
 import com.thomsonreuters.aws.ami.wrappers.ITags;
