@@ -7,13 +7,14 @@ package com.thomsonreuters.aws.ami.wrappers.impl;
 
 import com.amazonaws.services.ec2.model.Image;
 import com.thomsonreuters.aws.ami.wrappers.IAmi;
+import com.thomsonreuters.aws.ami.wrappers.IAmis;
 import java.util.List;
 
 /**
  *
  * @author U6067157
  */
-public class AmisImpl {
+public class AmisImpl implements IAmis {
     
     private final List<Image> _amis;
     
@@ -21,14 +22,17 @@ public class AmisImpl {
         _amis = amis;
     }
     
+    @Override
     public int size() {
         return _amis.size();
     }
     
+    @Override
     public boolean isEmpty() {
         return _amis.isEmpty();
     }
     
+    @Override
     public IAmi get(int idx) {
         return new AmiImpl(_amis.get(idx));
     }

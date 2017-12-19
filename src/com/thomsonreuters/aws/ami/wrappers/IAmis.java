@@ -5,17 +5,14 @@
  */
 package com.thomsonreuters.aws.ami.wrappers;
 
-import java.util.List;
-
 /**
  *
  * @author U6067157
  */
-public interface IRequestFilter {
+public interface IAmis {
+    int size();
     
-    String getName();
+    boolean isEmpty();
     
-    void addValue(String value);
-    
-    List<String> getValues();
+    IAmi get(int idx);
 }

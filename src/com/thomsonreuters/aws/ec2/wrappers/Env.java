@@ -5,10 +5,14 @@
  */
 package com.thomsonreuters.aws.ec2.wrappers;
 
+import com.thomsonreuters.aws.ec2.wrappers.impl.Ec2EnvImpl;
+
 /**
  *
  * @author U6067157
  */
-public class Ec2EnvImpl {
-    
+public class Env {
+    public static IEnv create() {
+        return new Ec2EnvImpl();
+    }
 }

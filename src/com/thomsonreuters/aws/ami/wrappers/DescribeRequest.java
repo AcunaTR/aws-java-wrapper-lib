@@ -5,17 +5,14 @@
  */
 package com.thomsonreuters.aws.ami.wrappers;
 
-import java.util.List;
+import com.thomsonreuters.aws.ami.wrappers.impl.DescribeRequestImpl;
 
 /**
  *
  * @author U6067157
  */
-public interface IRequestFilter {
-    
-    String getName();
-    
-    void addValue(String value);
-    
-    List<String> getValues();
+public class DescribeRequest {
+    public static IDescribeRequest create() {
+        return new DescribeRequestImpl();
+    }
 }

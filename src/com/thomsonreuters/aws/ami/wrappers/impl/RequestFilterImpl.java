@@ -30,6 +30,7 @@ public class RequestFilterImpl implements IRequestFilter, IDescribeRequestFilter
         return _name;
     }
     
+    @Override
     public void addValue(String value) {
         _values.add(value);
     }
