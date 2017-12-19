@@ -15,7 +15,7 @@ import com.thomsonreuters.aws.environment.request.filter.IFilters;
  *
  * @author U6067157
  */
-public class RequestFiltersStub implements IFilters {
+public class FiltersStub implements IFilters {
 
     private final List<IFilter> _filters = new ArrayList<>();
     

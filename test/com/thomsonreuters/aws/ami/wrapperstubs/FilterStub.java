@@ -14,7 +14,7 @@ import com.thomsonreuters.aws.environment.request.filter.IFilter;
  *
  * @author U6067157
  */
-public class RequestFilterStub implements IFilter {
+public class FilterStub implements IFilter {
 
     private String _name;
     

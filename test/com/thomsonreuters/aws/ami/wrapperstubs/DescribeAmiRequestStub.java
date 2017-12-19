@@ -12,12 +12,12 @@ import com.thomsonreuters.aws.environment.request.filter.IFilters;
  *
  * @author U6067157
  */
-public class DescribeRequestStub implements IDescribeAmisRequest {
+public class DescribeAmiRequestStub implements IDescribeAmisRequest {
     
     private IFilters _filters = null;
     
     public static IDescribeAmisRequest create() {
-        return new DescribeRequestStub();
+        return new DescribeAmiRequestStub();
     }
 
     @Override
