@@ -7,7 +7,6 @@ package com.thomsonreuters.aws.tag.impl;
 
 import com.thomsonreuters.aws.tag.ITag;
 import com.thomsonreuters.aws.tag.ITags;
-import com.thomsonreuters.aws.tag.impl.TagImpl;
 import com.amazonaws.services.ec2.model.Tag;
 import java.util.List;
 

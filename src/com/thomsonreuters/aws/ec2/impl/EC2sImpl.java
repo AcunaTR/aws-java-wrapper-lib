@@ -7,10 +7,10 @@ import com.thomsonreuters.aws.ec2.IEC2s;
 
 public class EC2sImpl implements IEC2s {
 
-	private final List<Instance> _ec2s;
-	
-	public EC2sImpl(List<Instance> instances) {
-		_ec2s = instances;
-	}
+    private final List<Instance> _ec2s;
+
+    public EC2sImpl(List<Instance> instances) {
+            _ec2s = instances;
+    }
 
 }
