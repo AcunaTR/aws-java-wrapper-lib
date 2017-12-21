@@ -1,8 +1,7 @@
-package com.thomsonreuters.aws.environment.ec2.request.ec2.impl;
+package com.thomsonreuters.aws.environment.ec2.request.impl;
 
 import com.amazonaws.services.ec2.model.DescribeInstancesRequest;
-import com.thomsonreuters.aws.environment.ec2.request.ec2.IDescribeEC2sRequest;
-import com.thomsonreuters.aws.environment.ec2.request.ec2.raw.IDescribeEC2sRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.IDescribeEC2sRequest;
 
 public class DescribeEC2sRequestImpl implements IDescribeEC2sRequest, IDescribeEC2sRequestRaw{
 

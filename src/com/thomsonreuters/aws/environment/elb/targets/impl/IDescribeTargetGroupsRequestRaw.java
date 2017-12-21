@@ -1,4 +1,4 @@
-package com.thomsonreuters.aws.environment.elb.request.targetgroup.raw;
+package com.thomsonreuters.aws.environment.elb.targets.impl;
 
 import com.amazonaws.services.elasticloadbalancingv2.model.DescribeTargetGroupsRequest;
 

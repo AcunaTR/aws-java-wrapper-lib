@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.filter.raw;
+package com.thomsonreuters.aws.environment.ec2.request.impl;
 
-import com.amazonaws.services.ec2.model.Filter;
-import java.util.List;
+import com.amazonaws.services.ec2.model.DescribeImagesRequest;
 
 /**
  *
  * @author U6067157
  */
-public interface IFiltersRaw {
-    List<Filter> getRaw();
+public interface IDescribeAmisRequestRaw {
+    DescribeImagesRequest getRaw();
 }

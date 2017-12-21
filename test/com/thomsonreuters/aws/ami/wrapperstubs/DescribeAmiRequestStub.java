@@ -5,7 +5,7 @@
  */
 package com.thomsonreuters.aws.ami.wrapperstubs;
 
-import com.thomsonreuters.aws.environment.ec2.request.ami.IDescribeAmisRequest;
+import com.thomsonreuters.aws.environment.ec2.request.IDescribeAmisRequest;
 import com.thomsonreuters.aws.filter.IFilters;
 
 /**

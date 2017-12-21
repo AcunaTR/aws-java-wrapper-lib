@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.environment.ec2.request.ami.impl;
+package com.thomsonreuters.aws.environment.ec2.request.impl;
 
 import com.amazonaws.services.ec2.model.DescribeImagesRequest;
-import com.thomsonreuters.aws.environment.ec2.request.ami.IDescribeAmisRequest;
-import com.thomsonreuters.aws.environment.ec2.request.ami.raw.IDescribeAmisRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.IDescribeAmisRequest;
 import com.thomsonreuters.aws.filter.IFilters;
-import com.thomsonreuters.aws.filter.raw.IFiltersRaw;
+import com.thomsonreuters.aws.filter.impl.IFiltersRaw;
 
 /**
  *
