@@ -26,7 +26,12 @@ public class FiltersImpl implements IFilters, IFiltersRaw {
         _filters = new ArrayList<>();
     }
     
-    @Override
+    public FiltersImpl(List<IFilter> filters) {
+    	_filters = new ArrayList<>();
+    	filters.forEach(filter -> {addFilter(filter);});
+	}
+
+	@Override
     public void addFilter(IFilter filter) {
         IFilterRaw raw = (IFilterRaw)filter;
         _filters.add(raw.getRaw());
