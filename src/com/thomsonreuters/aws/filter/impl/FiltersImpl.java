@@ -44,5 +44,11 @@ public class FiltersImpl implements IFilters, IFiltersRaw {
 	public IFilter getFilter(int idx) {
 		return new FilterImpl(_filters.get(idx));
 	}
+
+	@Override
+	public void addAllFilters(IFilters filters) {
+		IFiltersRaw raw = (IFiltersRaw) filters;
+		raw.getRaw().forEach(filter -> {_filters.add(filter);});
+	}
     
 }
