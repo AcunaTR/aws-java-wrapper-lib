@@ -12,7 +12,7 @@ import com.thomsonreuters.aws.tag.ITags;
  * @author U6067157
  */
 public interface IAmi {
-	String getImageId();
+    String getImageId();
     
     ITags getTags();
     

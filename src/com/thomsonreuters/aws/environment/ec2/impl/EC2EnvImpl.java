@@ -35,12 +35,11 @@ public class EC2EnvImpl implements IEC2Env {
         return new AmisImpl(_ec2.describeImages(raw.getRaw()).getImages());
     }
 
-
-	    @Override
-	    public IReservations describeEC2s(IDescribeEC2sRequest request) {
-	        IDescribeEC2sRequestRaw raw = (IDescribeEC2sRequestRaw)request;
-	        return new ReservationsImpl(_ec2.describeInstances(raw.getRaw()).getReservations());
-	    }
+    @Override
+    public IReservations describeEC2s(IDescribeEC2sRequest request) {
+        IDescribeEC2sRequestRaw raw = (IDescribeEC2sRequestRaw)request;
+        return new ReservationsImpl(_ec2.describeInstances(raw.getRaw()).getReservations());
+    }
 
 }
 
