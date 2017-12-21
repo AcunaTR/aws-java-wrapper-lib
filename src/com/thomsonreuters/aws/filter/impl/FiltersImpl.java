@@ -39,5 +39,10 @@ public class FiltersImpl implements IFilters, IFiltersRaw {
     public List<Filter> getRaw() {
         return _filters;
     }
+
+	@Override
+	public IFilter getFilter(int idx) {
+		return new FilterImpl(_filters.get(idx));
+	}
     
 }

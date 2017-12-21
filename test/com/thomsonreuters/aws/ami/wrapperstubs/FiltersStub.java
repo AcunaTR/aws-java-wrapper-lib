@@ -28,4 +28,11 @@ public class FiltersStub implements IFilters {
     public List<IFilter> getFilters() {
         return _filters;
     }
+
+
+	@Override
+	public IFilter getFilter(int idx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
