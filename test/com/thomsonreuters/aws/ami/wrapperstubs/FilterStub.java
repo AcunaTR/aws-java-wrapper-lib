@@ -8,7 +8,7 @@ package com.thomsonreuters.aws.ami.wrapperstubs;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.thomsonreuters.aws.environment.ec2.request.filter.IFilter;
+import com.thomsonreuters.aws.filter.IFilter;
 
 /**
  *
