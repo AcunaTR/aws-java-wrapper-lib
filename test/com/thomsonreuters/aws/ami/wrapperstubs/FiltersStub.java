@@ -35,4 +35,11 @@ public class FiltersStub implements IFilters {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+	@Override
+	public void addAllFilters(IFilters filters) {
+		// TODO Auto-generated method stub
+		
+	}
 }
