@@ -44,4 +44,11 @@ public class EC2sImpl implements IEC2s, IEC2sRaw {
 	public List<Instance> getRaw() {
 		return _ec2s;
 	}
+	
+	@Override
+	public IEC2s clone() {
+		List<Instance> newList = new ArrayList<>();
+		newList.addAll(_ec2s);
+		return new EC2sImpl(newList);
+	}
 }

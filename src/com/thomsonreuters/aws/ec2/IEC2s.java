@@ -10,4 +10,6 @@ public interface IEC2s {
     IEC2 get(int idx);
     
     void addAll(IEC2s ec2s);
+    
+    IEC2s clone();
 }
