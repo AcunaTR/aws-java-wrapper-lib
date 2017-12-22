@@ -24,18 +24,16 @@ public class FiltersStub implements IFilters {
         _filters.add(filter);
     }
     
-    
+    @Override
     public List<IFilter> getFilters() {
         return _filters;
     }
 
-
-	@Override
-	public IFilter getFilter(int idx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+    @Override
+    public IFilter getFilter(int idx) {
+        // TODO Auto-generated method stub
+        return _filters.get(idx);
+    }
 
 	@Override
 	public void addAllFilters(IFilters filters) {

@@ -6,6 +6,5 @@ import com.amazonaws.services.ec2.model.Instance;
 
 public interface IEC2sRaw {
 
-	List<Instance> getRaw();
-	
+    List<Instance> getRaw();	
 }
