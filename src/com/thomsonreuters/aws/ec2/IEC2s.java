@@ -8,4 +8,6 @@ public interface IEC2s {
     boolean isEmpty();
     
     IEC2 get(int idx);
+    
+    void addAll(IEC2s ec2s);
 }
