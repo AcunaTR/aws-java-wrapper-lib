@@ -11,4 +11,9 @@ public class TargetGroupImpl implements ITargetGroup {
         _targetGroup = targetGroup;
     }
 
+	@Override
+	public String getTargetGroupArn() {
+		return _targetGroup.getTargetGroupArn();
+	}
+
 }
