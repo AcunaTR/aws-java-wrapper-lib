@@ -44,6 +44,11 @@
     	<artifactId>aws-java-sdk-elasticloadbalancingv2</artifactId>
     	<version>1.11.251</version>
     </dependency>
+    <dependency>
+    	<groupId>com.amazonaws</groupId>
+    	<artifactId>aws-java-sdk-sns</artifactId>
+    	<version>1.11.257</version>
+    </dependency>
   </dependencies>
   <dependencyManagement>
     <dependencies>
