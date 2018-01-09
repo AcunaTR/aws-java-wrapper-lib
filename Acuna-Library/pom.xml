@@ -4,7 +4,26 @@
   <groupId>com.thomsonreuters.lambda</groupId>
   <artifactId>Acuna-Library</artifactId>
   <version>1.0.0</version>
+  <distributionManagement>
+        <repository>
+            <id>maven-s3-release-repo</id>
+            <name>AWS Release Repository</name>
+            <url>s3://acuna-lambda/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-s3-snapshot-repo</id>
+            <name>AWS Snapshot Repository</name>
+            <url>s3://acuna-lambda/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
   <build>
+  <extensions>
+  	  <extension>
+        <groupId>org.springframework.build</groupId>
+        <artifactId>aws-maven</artifactId>
+        <version>5.0.0.RELEASE</version>
+      </extension>
+  </extensions>
       <sourceDirectory>${basedir}/src</sourceDirectory>
       <testSourceDirectory>${basedir}/test</testSourceDirectory>
     <plugins>

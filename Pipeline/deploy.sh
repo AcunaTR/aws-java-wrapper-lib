@@ -5,4 +5,7 @@ function deployFail {
 }
 trap deployFail ERROR
 
-aws s3 cp ./Acuna-Library/target/Acuna-Library-1.0.0.jar s3://acuna-lambda
+docker run --rm \
+           -v "${CURDIR}/:/build" \
+           --workdir /build/Acuna-Library \
+           maven:3.5.2-jdk-8 mvn deploy
