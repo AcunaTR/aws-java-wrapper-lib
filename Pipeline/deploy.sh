@@ -5,6 +5,8 @@ function deployFail {
 }
 trap deployFail ERROR
 
+CURDIR=`pwd`
+
 docker run --rm \
            -v "${CURDIR}/:/build" \
            --workdir /build/Acuna-Library \
