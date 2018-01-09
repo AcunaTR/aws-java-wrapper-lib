@@ -5,4 +5,4 @@ function deployFail {
 }
 trap deployFail ERROR
 
-
+aws cp /Acuna-Library/target/Acuna-Library-1.0.0.jar s3://acuna-lambda
