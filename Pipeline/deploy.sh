@@ -6,6 +6,7 @@ function deployFail {
 trap deployFail ERROR
 
 CURDIR=`pwd`
+VERSION=$(cat ./version)
 
 docker run --rm \
            -v "${CURDIR}/:/build" \

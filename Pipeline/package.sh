@@ -6,6 +6,7 @@ function packageFail {
 trap packageFail ERROR
 
 CURDIR=`pwd`
+VERSION=$(cat ./version)
 
 docker run --rm \
            -v "${CURDIR}/:/build" \
