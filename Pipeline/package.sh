@@ -10,7 +10,7 @@ VERSION=$(cat ./version)
 BUILD_VERSION=$VERSION.$BUILD_NUMBER
 
 docker run --rm \
-		   --env BUILD_NUMBER=$BUILD_NUMBER \
+		   --env BUILD_VERSION=$BUILD_VERSION \
            -v "${CURDIR}/:/build" \
            --workdir /build/Acuna-Library \
-           maven:3.5.2-jdk-8 echo "In container" && echo $BUILD_NUMBER
+           maven:3.5.2-jdk-8 echo "In container" && echo $BUILD_VERSION
