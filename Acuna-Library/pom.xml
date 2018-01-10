@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.thomsonreuters.lambda</groupId>
   <artifactId>Acuna-Library</artifactId>
-  <version>${env.version}.${env.build_number}</version>
+  <version>'${env.VERSION}'.'${env.BUILD_NUMBER}'</version>
   <distributionManagement>
         <repository>
             <id>maven-s3-release-repo</id>
