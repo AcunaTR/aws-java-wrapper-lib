@@ -7,6 +7,7 @@ trap packageFail ERROR
 
 CURDIR=`pwd`
 VERSION=$(cat ./version)
+BUILD_VERSION=$VERSION.$BUILD_NUMBER
 
 docker run --rm \
            -v "${CURDIR}/:/build" \
