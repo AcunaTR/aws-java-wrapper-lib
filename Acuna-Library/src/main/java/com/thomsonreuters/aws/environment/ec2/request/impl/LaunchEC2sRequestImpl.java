@@ -4,11 +4,11 @@ import com.amazonaws.services.ec2.model.LaunchTemplateSpecification;
 import com.amazonaws.services.ec2.model.RunInstancesRequest;
 import com.thomsonreuters.aws.environment.ec2.request.ILaunchEC2sRequest;
 
-public class LaunchEC2sRequest implements ILaunchEC2sRequest, ILaunchEC2sRequestRaw {
+public class LaunchEC2sRequestImpl implements ILaunchEC2sRequest, ILaunchEC2sRequestRaw {
 
 	private RunInstancesRequest _req;
 	
-	public LaunchEC2sRequest() {
+	public LaunchEC2sRequestImpl() {
 		_req = new RunInstancesRequest();
 	}
 	
