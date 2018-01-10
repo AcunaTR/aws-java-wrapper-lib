@@ -13,4 +13,4 @@ docker run --rm \
 		   --env BUILD_VERSION=$BUILD_VERSION \
            -v "${CURDIR}/:/build" \
            --workdir /build/Acuna-Library \
-           maven:3.5.2-jdk-8 echo "In container" && echo $BUILD_VERSION
+           maven:3.5.2-jdk-8 mvn package
