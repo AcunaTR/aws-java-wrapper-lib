@@ -56,7 +56,7 @@
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-ec2</artifactId>
-      <version>1.11.250</version>
+      <version>1.11.261</version>
     </dependency>
     <dependency>
     	<groupId>com.amazonaws</groupId>
