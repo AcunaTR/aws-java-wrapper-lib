@@ -3,7 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.thomsonreuters.lambda</groupId>
   <artifactId>Acuna-Library</artifactId>
-  <version>${env.BUILD_VERSION}</version>
+  <version>${env.BUILD_VERSION}</version> 
+  <!--  
+  Change this linne to a specific version if one library version required, 
+  otherwise it will default to the latest build
+   -->
   <distributionManagement>
         <repository>
             <id>maven-s3-release-repo</id>
