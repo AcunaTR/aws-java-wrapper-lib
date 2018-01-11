@@ -6,5 +6,4 @@ public class EC2 {
 	public static IEC2 create() {
 		return new EC2Impl();
 	}
-	//test
 }
