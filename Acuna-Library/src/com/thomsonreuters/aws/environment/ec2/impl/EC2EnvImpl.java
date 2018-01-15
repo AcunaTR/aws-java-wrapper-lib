@@ -52,7 +52,6 @@ public class EC2EnvImpl implements IEC2Env {
     public void terminateInstances(ITerminateInstancesRequest req) {
         ITerminateInstancesRequestRaw raw = (ITerminateInstancesRequestRaw) req;
         _env.terminateInstances(raw.getRaw());
-
     }
 
     @Override

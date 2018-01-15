@@ -14,7 +14,6 @@ public class TerminateInstancesRequestImpl implements ITerminateInstancesRequest
         _req = new TerminateInstancesRequest();
     }
 
-
     @Override
     public TerminateInstancesRequest getRaw() {
 

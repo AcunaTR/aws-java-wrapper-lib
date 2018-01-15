@@ -11,5 +11,5 @@ public interface IELBEnv {
 
     void deregisterTargets(IDeregisterTargetsRequest req);
 
-	DescribeTargetHealthResult describeTargetHealth(IDescribeTargetHealthRequest request);	
+    DescribeTargetHealthResult describeTargetHealth(IDescribeTargetHealthRequest request);	
 }

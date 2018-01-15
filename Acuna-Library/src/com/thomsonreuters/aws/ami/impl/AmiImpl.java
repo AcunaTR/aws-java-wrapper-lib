@@ -39,7 +39,7 @@ public class AmiImpl implements IAmi {
     }
     
     @Override
-	public String toString() {
-		return _ami.toString();
-	}
+    public String toString() {
+        return _ami.toString();
+    }
 }
