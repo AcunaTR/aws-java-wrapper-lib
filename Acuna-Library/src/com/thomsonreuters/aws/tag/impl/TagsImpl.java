@@ -24,9 +24,7 @@ public class TagsImpl implements ITags {
     public TagsImpl(List<Tag> tags)
     {
     	_tags = new HashMap<>();
-    	for(Tag t : tags) {
-            _tags.put(t.getKey(), t);
-    	}
+        tags.forEach((t) -> {_tags.put(t.getKey(), t);});
     }
     
     @Override

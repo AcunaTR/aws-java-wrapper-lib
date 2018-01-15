@@ -40,7 +40,7 @@ public class AmisImpl implements IAmis {
     }
     
     @Override
-	public String toString() {
-		return _amis.toString();
-	}
+    public String toString() {
+        return _amis.toString();
+    }
 }
