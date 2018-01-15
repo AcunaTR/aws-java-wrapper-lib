@@ -34,9 +34,9 @@ public class TargetGroupImpl implements ITargetGroup {
         List <TargetHealthDescription> targetHealth = res.getTargetHealthDescriptions();
         List<String> ids = new ArrayList<>();
 
-        for (TargetHealthDescription targetH : targetHealth) {
+        targetHealth.forEach((targetH) -> {
             ids.add(targetH.getTarget().getId());
-        }
+        });
         return ids;
     }
 
