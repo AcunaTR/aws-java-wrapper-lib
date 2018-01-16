@@ -18,4 +18,6 @@ public interface IEC2s {
 
     @Override
     String toString();
+    
+    IEC2 remove(int idx);
 }
