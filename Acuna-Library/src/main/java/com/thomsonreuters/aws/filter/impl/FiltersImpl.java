@@ -63,4 +63,10 @@ public class FiltersImpl implements IFilters, IFiltersRaw {
     public String toString() {
         return _filters.toString();
     }
+
+	@Override
+	public boolean contains(IFilter filter) {
+		IFilterRaw raw = (IFilterRaw)filter;
+		return _filters.contains(raw.getRaw());
+	}
 }

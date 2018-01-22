@@ -16,4 +16,5 @@ public interface IFilters {
     IFilter getFilter(int idx);
     List<IFilter> getFilters();
     void addAllFilters(IFilters filters);
+    boolean contains(IFilter filter);
 }

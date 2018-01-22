@@ -39,4 +39,10 @@ public class FiltersStub implements IFilters {
     public void addAllFilters(IFilters filters) {
         // TODO Auto-generated method stub
     }
+
+	@Override
+	public boolean contains(IFilter filter) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
