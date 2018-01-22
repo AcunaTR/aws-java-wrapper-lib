@@ -6,10 +6,11 @@
 package com.thomsonreuters.aws.ami.impl;
 
 import com.amazonaws.services.ec2.model.Image;
-
+import com.amazonaws.services.ec2.model.Tag;
 import com.thomsonreuters.aws.ami.IAmi;
 import com.thomsonreuters.aws.ami.IAmis;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -43,4 +44,30 @@ public class AmisImpl implements IAmis {
     public String toString() {
         return _amis.toString();
     }
+
+	@Override
+	public List<String> getIds() {
+		List<String> ids = new ArrayList<>();
+		
+		for(Image img : _amis) {
+			ids.add(img.getImageId());
+		}
+		return ids;
+	}
+
+	@Override
+	public List<String> getNames() {
+		List<String> names = new ArrayList<>();
+		
+		for(Image img : _amis) {
+			List<Tag> tags = img.getTags();
+			for(Tag t : tags) {
+				if (t.getKey() == "Name") {
+					names.add(t.getValue());
+				}
+			}
+		}
+		return names;
+	}
+
 }

@@ -5,6 +5,8 @@
  */
 package com.thomsonreuters.aws.ami;
 
+import java.util.List;
+
 /**
  *
  * @author U6067157
@@ -15,4 +17,9 @@ public interface IAmis {
     boolean isEmpty();
     
     IAmi get(int idx);
+    
+    List<String> getIds();
+    
+    List<String> getNames();
+
 }
