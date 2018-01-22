@@ -30,7 +30,7 @@ public class FiltersImpl implements IFilters, IFiltersRaw {
     	filters.forEach(filter -> {addFilter(filter);});
 	}
 
-    @Override
+	@Override
     public void addFilter(IFilter filter) {
         IFilterRaw raw = (IFilterRaw)filter;
         _filters.add(raw.getRaw());

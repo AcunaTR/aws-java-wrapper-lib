@@ -6,7 +6,9 @@
 package com.thomsonreuters.aws.environment.ec2.request;
 
 import java.util.Collection;
+import java.util.List;
 
+import com.thomsonreuters.aws.filter.IFilter;
 import com.thomsonreuters.aws.filter.IFilters;
 
 /**
@@ -18,4 +20,5 @@ public interface IDescribeAmisRequest {
     void setAmiIds(Collection<String> ids);
     void setAmiId(String id);
     Collection<String> getAmiIds();
+    IFilters getFilters();
 }

@@ -7,11 +7,15 @@ package com.thomsonreuters.aws.environment.ec2.request.impl;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 import com.amazonaws.services.ec2.model.DescribeImagesRequest;
-
+import com.amazonaws.services.ec2.model.Filter;
 import com.thomsonreuters.aws.environment.ec2.request.IDescribeAmisRequest;
+import com.thomsonreuters.aws.filter.IFilter;
 import com.thomsonreuters.aws.filter.IFilters;
+import com.thomsonreuters.aws.filter.impl.FilterImpl;
+import com.thomsonreuters.aws.filter.impl.FiltersImpl;
 import com.thomsonreuters.aws.filter.impl.IFiltersRaw;
 
 /**
@@ -55,5 +59,19 @@ public class DescribeAmisRequestImpl implements IDescribeAmisRequest, IDescribeA
 	@Override
 	public Collection<String> getAmiIds() {
 		return _req.getImageIds();
+	}
+
+	@Override
+	public IFilters getFilters() {
+		IFilters filters = new FiltersImpl();
+		
+		
+		List<Filter> awsFilters = _req.getFilters();
+		
+		for(Filter f : awsFilters) {
+			filters.addFilter(new FilterImpl(f));
+		}
+		
+		return filters;
 	}
 }
