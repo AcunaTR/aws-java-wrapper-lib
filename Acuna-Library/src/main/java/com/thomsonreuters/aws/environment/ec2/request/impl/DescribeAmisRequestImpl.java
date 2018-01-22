@@ -5,6 +5,9 @@
  */
 package com.thomsonreuters.aws.environment.ec2.request.impl;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import com.amazonaws.services.ec2.model.DescribeImagesRequest;
 
 import com.thomsonreuters.aws.environment.ec2.request.IDescribeAmisRequest;
@@ -38,4 +41,19 @@ public class DescribeAmisRequestImpl implements IDescribeAmisRequest, IDescribeA
     public String toString() {
         return _req.toString();
     }
+
+	@Override
+	public void setAmiIds(Collection<String> ids) {
+		_req.setImageIds(ids);		
+	}
+
+	@Override
+	public void setAmiId(String id) {
+		_req.setImageIds(Arrays.asList(id));
+	}
+
+	@Override
+	public Collection<String> getAmiIds() {
+		return _req.getImageIds();
+	}
 }
