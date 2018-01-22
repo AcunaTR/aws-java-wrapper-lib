@@ -5,7 +5,7 @@
 .settings/
 .classpath
 .project
-.metadata
+.metadata/
 
 # Misc
 *.swp
