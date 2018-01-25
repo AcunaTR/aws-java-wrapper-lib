@@ -14,11 +14,6 @@
             <name>AWS Release Repository</name>
             <url>s3://acuna.abstraction.layer/releases</url>
         </repository>
-        <snapshotRepository>
-            <id>maven-s3-snapshot-repo</id>
-            <name>AWS Snapshot Repository</name>
-            <url>s3://acuna.abstraction.layer/snapshots</url>
-        </snapshotRepository>
     </distributionManagement>
   <build>
   <extensions>
