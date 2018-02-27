@@ -6,6 +6,7 @@
 package com.thomsonreuters.aws.environment.ec2.request;
 
 import com.thomsonreuters.aws.environment.ec2.request.impl.DescribeAmisRequestImpl;
+import com.thomsonreuters.aws.environment.ec2.request.interfaces.IDescribeAmisRequest;
 
 /**
  *

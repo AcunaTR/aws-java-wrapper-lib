@@ -7,7 +7,7 @@ package com.thomsonreuters.aws.ami.wrapperstubs;
 
 import java.util.Collection;
 
-import com.thomsonreuters.aws.environment.ec2.request.IDescribeAmisRequest;
+import com.thomsonreuters.aws.environment.ec2.request.interfaces.IDescribeAmisRequest;
 import com.thomsonreuters.aws.filter.IFilters;
 
 /**

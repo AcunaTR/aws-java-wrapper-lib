@@ -5,8 +5,8 @@ import java.util.List;
 
 import com.amazonaws.services.ec2.model.DescribeInstancesRequest;
 import com.amazonaws.services.ec2.model.Filter;
-
-import com.thomsonreuters.aws.environment.ec2.request.IDescribeEC2sRequest;
+import com.thomsonreuters.aws.environment.ec2.request.impl.raw.IDescribeEC2sRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.interfaces.IDescribeEC2sRequest;
 import com.thomsonreuters.aws.filter.IFilter;
 import com.thomsonreuters.aws.filter.IFilters;
 import com.thomsonreuters.aws.filter.impl.IFilterRaw;

@@ -11,8 +11,8 @@ import java.util.List;
 
 import com.amazonaws.services.ec2.model.DescribeImagesRequest;
 import com.amazonaws.services.ec2.model.Filter;
-import com.thomsonreuters.aws.environment.ec2.request.IDescribeAmisRequest;
-import com.thomsonreuters.aws.filter.IFilter;
+import com.thomsonreuters.aws.environment.ec2.request.impl.raw.IDescribeAmisRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.interfaces.IDescribeAmisRequest;
 import com.thomsonreuters.aws.filter.IFilters;
 import com.thomsonreuters.aws.filter.impl.FilterImpl;
 import com.thomsonreuters.aws.filter.impl.FiltersImpl;

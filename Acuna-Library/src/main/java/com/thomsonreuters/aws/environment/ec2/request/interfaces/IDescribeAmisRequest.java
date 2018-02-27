@@ -3,12 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.thomsonreuters.aws.environment.ec2.request;
+package com.thomsonreuters.aws.environment.ec2.request.interfaces;
 
 import java.util.Collection;
-import java.util.List;
-
-import com.thomsonreuters.aws.filter.IFilter;
 import com.thomsonreuters.aws.filter.IFilters;
 
 /**

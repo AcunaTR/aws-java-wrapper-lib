@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author U6067157
  */
-public interface IAmis {
+public interface IAmis extends Iterable<IAmi> {
     int size();
     
     boolean isEmpty();

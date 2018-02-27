@@ -3,8 +3,8 @@ package com.thomsonreuters.aws.environment.ec2.request.impl;
 import java.util.List;
 
 import com.amazonaws.services.ec2.model.TerminateInstancesRequest;
-
-import com.thomsonreuters.aws.environment.ec2.request.ITerminateInstancesRequest;
+import com.thomsonreuters.aws.environment.ec2.request.impl.raw.ITerminateInstancesRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.interfaces.ITerminateInstancesRequest;
 
 public class TerminateInstancesRequestImpl implements ITerminateInstancesRequest, ITerminateInstancesRequestRaw {
 

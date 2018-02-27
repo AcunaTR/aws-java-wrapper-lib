@@ -3,7 +3,6 @@ package com.thomsonreuters.aws.ec2.impl;
 import java.util.Date;
 
 import com.amazonaws.services.ec2.model.Instance;
-
 import com.thomsonreuters.aws.ec2.IEC2;
 import com.thomsonreuters.aws.iam.instanceprofile.IInstanceProfile;
 import com.thomsonreuters.aws.iam.instanceprofile.impl.InstanceProfileImpl;

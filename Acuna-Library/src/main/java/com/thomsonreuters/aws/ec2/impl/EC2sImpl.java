@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.amazonaws.services.ec2.model.Instance;
-
 import com.thomsonreuters.aws.ec2.IEC2;
 import com.thomsonreuters.aws.ec2.IEC2s;
 

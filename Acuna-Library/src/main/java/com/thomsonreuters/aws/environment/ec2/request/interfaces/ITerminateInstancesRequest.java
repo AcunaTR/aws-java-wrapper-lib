@@ -1,4 +1,4 @@
-package com.thomsonreuters.aws.environment.ec2.request;
+package com.thomsonreuters.aws.environment.ec2.request.interfaces;
 
 import java.util.List;
 

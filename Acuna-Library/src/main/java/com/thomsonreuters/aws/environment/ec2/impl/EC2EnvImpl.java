@@ -5,24 +5,37 @@
  */
 package com.thomsonreuters.aws.environment.ec2.impl;
 
+import java.util.List;
+
 import com.amazonaws.services.ec2.AmazonEC2;
 import com.amazonaws.services.ec2.AmazonEC2ClientBuilder;
+import com.amazonaws.services.ec2.model.DescribeLaunchTemplatesResult;
+import com.amazonaws.services.ec2.model.DescribeSubnetsResult;
+import com.amazonaws.services.ec2.model.LaunchTemplate;
 import com.amazonaws.services.ec2.model.RunInstancesResult;
+import com.thomsonreuters.aws.ami.Amis;
 import com.thomsonreuters.aws.ami.IAmis;
-import com.thomsonreuters.aws.ami.impl.AmisImpl;
 import com.thomsonreuters.aws.environment.ec2.IEC2Env;
-import com.thomsonreuters.aws.environment.ec2.request.ILaunchEC2sRequest;
-import com.thomsonreuters.aws.environment.ec2.request.IDescribeAmisRequest;
-import com.thomsonreuters.aws.environment.ec2.request.IDescribeEC2sRequest;
-import com.thomsonreuters.aws.environment.ec2.request.ITerminateInstancesRequest;
-import com.thomsonreuters.aws.environment.ec2.request.impl.IDescribeAmisRequestRaw;
-import com.thomsonreuters.aws.environment.ec2.request.impl.IDescribeEC2sRequestRaw;
-import com.thomsonreuters.aws.environment.ec2.request.impl.ILaunchEC2sRequestRaw;
-import com.thomsonreuters.aws.environment.ec2.request.impl.ITerminateInstancesRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.impl.raw.IDescribeAmisRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.impl.raw.IDescribeEC2sRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.impl.raw.IDescribeLaunchTemplatesRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.impl.raw.IDescribeSubnetsRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.impl.raw.ILaunchEC2sRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.impl.raw.ITerminateInstancesRequestRaw;
+import com.thomsonreuters.aws.environment.ec2.request.interfaces.IDescribeAmisRequest;
+import com.thomsonreuters.aws.environment.ec2.request.interfaces.IDescribeEC2sRequest;
+import com.thomsonreuters.aws.environment.ec2.request.interfaces.IDescribeLaunchTemplatesRequest;
+import com.thomsonreuters.aws.environment.ec2.request.interfaces.IDescribeSubnetsRequest;
+import com.thomsonreuters.aws.environment.ec2.request.interfaces.ILaunchEC2sRequest;
+import com.thomsonreuters.aws.environment.ec2.request.interfaces.ITerminateInstancesRequest;
+import com.thomsonreuters.aws.launchtemplate.ILaunchTemplates;
+import com.thomsonreuters.aws.launchtemplate.impl.LaunchTemplatesImpl;
 import com.thomsonreuters.aws.reservation.IReservation;
 import com.thomsonreuters.aws.reservation.IReservations;
 import com.thomsonreuters.aws.reservation.impl.ReservationImpl;
 import com.thomsonreuters.aws.reservation.impl.ReservationsImpl;
+import com.thomsonreuters.aws.subnet.ISubnets;
+import com.thomsonreuters.aws.subnet.impl.SubnetsImpl;
 
 /**
  *
@@ -39,7 +52,7 @@ public class EC2EnvImpl implements IEC2Env {
     @Override
     public IAmis describeAmis(IDescribeAmisRequest request) {
         IDescribeAmisRequestRaw raw = (IDescribeAmisRequestRaw)request;
-        return new AmisImpl(_env.describeImages(raw.getRaw()).getImages());
+        return Amis.create(_env.describeImages(raw.getRaw()).getImages());
     }
 
     @Override
@@ -65,4 +78,19 @@ public class EC2EnvImpl implements IEC2Env {
         RunInstancesResult res = _env.runInstances(raw.getRaw());
         return new ReservationImpl(res.getReservation());
     }
+    
+    @Override
+    public ILaunchTemplates describeTemplates(IDescribeLaunchTemplatesRequest request) {
+    	IDescribeLaunchTemplatesRequestRaw raw = (IDescribeLaunchTemplatesRequestRaw) request;
+    	DescribeLaunchTemplatesResult result = _env.describeLaunchTemplates(raw.getRaw());
+    	List<LaunchTemplate> templates = result.getLaunchTemplates();
+		return new LaunchTemplatesImpl(templates);
+    }
+
+	@Override
+	public ISubnets describeSubnets(IDescribeSubnetsRequest req) {
+		IDescribeSubnetsRequestRaw raw = (IDescribeSubnetsRequestRaw) req;
+		DescribeSubnetsResult result = _env.describeSubnets(raw.getRaw());
+		return new SubnetsImpl(result.getSubnets());
+	}    	
 }
